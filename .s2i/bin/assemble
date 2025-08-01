@@ -1,18 +1,9 @@
 #!/bin/bash
 set -euxo pipefail
 
-echo "Default loc = $(pwd)"
-ls -la
-
-# Ensure you're in the source directory
 cd /tmp/src
 
-echo "Building project in $(pwd)"
-ls -l ./gradlew
-
-# Run the Gradle build
 chmod +x ./gradlew
 ./gradlew clean build -x test
 
-# Copy final JAR to output dir for runtime image
 cp build/libs/*.jar $HOME
