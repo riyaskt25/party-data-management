@@ -1,5 +1,6 @@
 #!/bin/bash
-set -e
+#set -e
+set -euxo pipefail
 chmod +x ./gradlew
 ./gradlew clean build -x test
 cp build/libs/*.jar $HOME
