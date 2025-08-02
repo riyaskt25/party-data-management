@@ -6,4 +6,5 @@ cd /tmp/src
 chmod +x ./gradlew
 ./gradlew clean build -x test
 
-cp build/libs/*.jar $HOME
+cp build/libs/*.jar /deployments/app.jar
+
